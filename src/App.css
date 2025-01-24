@@ -1,0 +1,114 @@
+/* Root Container */
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #00d1b2);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Keyframes for Spinning Animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Motion Preference Check */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Component */
+.card {
+  padding: 1em;
+  /*width: 50%;*/
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 1500px;   /* Adjust width of each card */
+  box-sizing: border-box;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Documentation Link Style */
+.read-the-docs {
+  color: #a0a0a0;
+}
+
+/* Button Styles */
+.button {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #00d1b2;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #00d1b2;
+  color: #121212;
+}
+
+/* Responsive Utilities */
+.container {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 20px;
+}
+.navbar-brand{
+  font-family: "Squada One", serif;
+  
+}
+.navbar{
+ padding-inline: 3em;
+}
+h1, h2, h3 {
+  color: #e0e0e0;
+}
+.name-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  height: 100%;
+}
+card-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 16px;  /* Adjust space between cards */
+  padding: 16px;
+}
+
+
+.card-image video {
+  width: 100%; /* Make video fit within card */
+  height: auto;
+}
